@@ -1,0 +1,30 @@
+
+<h2>Lista Reservas</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>id</th>
+            <th>Clase Vuelo</th>
+            <th>Asiento</th> 
+            <th>Id Pasajero</th>
+            <th>Id Vuelo</th>              
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let reserva of reservas">
+            <td>{{reserva.id}}</td>
+            <td>{{reserva.claseVuelo}}</td>
+            <td>{{reserva.asiento}}</td>
+            <td>{{reserva.fk_Id_Pasajero?.id}}</td>
+            <td>{{reserva.fk_Id_Vuelo?.id}}</td>
+            <td>
+                <button (click)="actualizarReserva(reserva.id)" class="btn btn-info">Editar</button>
+                <button (click)="eliminarReserva(reserva.id)" class="btn btn-danger" style="margin-left : 10px">Eliminar</button>
+                <button [routerLink]="'/Sistema/reserva/ingresar-reserva/'"
+            class="btn btn-warning" style="margin-left : 10px">NUEVO</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+

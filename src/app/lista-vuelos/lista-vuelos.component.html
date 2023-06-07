@@ -1,0 +1,37 @@
+
+<h2>Lista Vuelos</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>id</th>
+            <th>Origen Vuelo</th>
+            <th>Fecha de Salida</th>
+            <th>Hora de Salida</th>     
+            <th>Destion de Vuelo</th> 
+            <th>Fecha de Llegada</th> 
+            <th>Hora de Llegada</th>
+            <th>Hora de Revision</th> 
+            <th>Numero de Puerta</th>       
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vuelo of vuelos">
+            <td>{{vuelo.id}}</td>
+            <td>{{vuelo.origenVuelo}}</td>
+            <td>{{vuelo.fecha_Salida}}</td>
+            <td>{{vuelo.horaSalida}}</td>
+            <td>{{vuelo.destinoVuelo}}</td>
+            <td>{{vuelo.fecha_Llegada}}</td>
+            <td>{{vuelo.horaLlegada}}</td>
+            <td>{{vuelo.horaRevision}}</td>
+            <td>{{vuelo.numero_Puerta}}</td>
+            <td>
+                <button (click)="actualizarVuelo(vuelo.id)" class="btn btn-info">Editar</button>
+                <button (click)="eliminarVuelo(vuelo.id)" class="btn btn-danger" style="margin-left : 1px">Eliminar</button>
+                <button [routerLink]="'/Sistema/vuelo/ingresar-vuelo/'"
+            class="btn btn-warning">Nuevo</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>

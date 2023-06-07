@@ -1,0 +1,63 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de Pasajeros </h3>
+    <form (ngSubmit)="onSubmit()" #pasajeroForm = "ngForm">
+        <div class="form-group">
+            <label>Id: </label>
+            <input type = "number"
+            class="form-control"
+            id="id"
+            [(ngModel)] = "pasajero.id"
+            name = "id">
+        </div>
+        <div class="form-group">
+            <label>Nombre: </label>
+            <input type = "text"
+            class="form-control"
+            id="nombrePasajero"
+            [(ngModel)] = "pasajero.nombrePasajero"
+            name = "nombrePasajero">
+        </div>
+        <div class="form-group">
+            <label>Fecha de Nacimiento: </label>
+            <input type = "date"
+            class="form-control"
+            id="fecha_NacimientoPas"
+            [(ngModel)] = "pasajero.fecha_NacimientoPas"
+            name = "fecha_NacimientoPas">
+        </div>
+        <div class="form-group">
+            <label>Telefono: </label>
+            <input type = "number"
+            class="form-control"
+            id="telefonoPasajero"
+            [(ngModel)] = "pasajero.telefonoPasajero"
+            name = "telefonoPasajero">
+        </div>
+        <div class="form-group">
+            <label>Direccion: </label>
+            <input type = "text"
+            class="form-control"
+            id="direccionPasajero"
+            [(ngModel)] = "pasajero.direccionPasajero"
+            name = "direccionPasajero">
+        </div>
+        <div class="form-group">
+            <label>Genero: </label>
+            <input type = "text"
+            class="form-control"
+            id="generoPasajero"
+            [(ngModel)] = "pasajero.generoPasajero"
+            name = "generoPasajero">
+        </div>
+        <div class="form-group">
+            <label>Nacionalidad: </label>
+            <input type = "text"
+            class="form-control"
+            id="nacionalidadPas"
+            [(ngModel)] = "pasajero.nacionalidadPas"
+            name = "nacionalidadPas">
+        </div>
+    
+        <button class="btn btn-success" [disabled]= "!pasajeroForm.form.valid">Guardar</button>
+    </form>
+    </div>

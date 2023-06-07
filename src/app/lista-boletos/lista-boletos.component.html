@@ -1,0 +1,31 @@
+
+<h2>Lista Boletos</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>id</th>
+            <th>Fecha de Emision</th>
+            <th>Fecha de Validacion</th>
+            <th>Precio de Boleto</th>     
+            <th>Hora PreChequeo</th>
+            <th>Id Reserva</th>        
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let boleto of boletos">
+            <td>{{boleto.id}}</td>
+            <td>{{boleto.fechaEmision}}</td>
+            <td>{{boleto.fechaValidacion}}</td>
+            <td>{{boleto.precioBoleto}}</td>
+            <td>{{boleto.horaPrechequeo}}</td>
+            <td>{{boleto.fk_Id_Reserva?.id}}</td>
+            <td>
+                <button (click)="actualizarBoleto(boleto.id)" class="btn btn-info">Editar</button>
+                <button (click)="eliminarBoleto(boleto.id)" class="btn btn-danger" style="margin-left : 10px">Eliminar</button>
+                <button [routerLink]="'/Sistema/boleto/ingresar-boletos/'"
+            class="btn btn-warning" style="margin-left : 10px">Nuevo</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>

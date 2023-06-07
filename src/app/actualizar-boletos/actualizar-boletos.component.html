@@ -1,0 +1,46 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de Boletos </h3>
+    <form (ngSubmit)="onSubmit()" #boletoForm = "ngForm">
+        <div class="form-group">
+            <label>Id: </label>
+            <input type = "number"
+            class="form-control"
+            id="id"
+            [(ngModel)] = "boleto.id"
+            name = "id">
+        </div>
+        <div class="form-group">
+            <label>Fecha de Emision: </label>
+            <input type = "date"
+            class="form-control"
+            id="fechaEmision"
+            [(ngModel)] = "boleto.fechaEmision"
+            name = "fechaEmision">
+        </div>
+        <div class="form-group">
+            <label>Fecha de Validacion: </label>
+            <input type = "date"
+            class="form-control"
+            id="fechaValidacion"
+            [(ngModel)] = "boleto.fechaValidacion"
+            name = "fechaValidacion">
+        </div>
+        <div class="form-group">
+            <label>Precio de Boleto: </label>
+            <input type = "number"
+            class="form-control"
+            id="precioBoleto"
+            [(ngModel)] = "boleto.precioBoleto"
+            name = "precioBoleto">
+        </div>
+        <div class="form-group">
+            <label>Hora PreChequeo: </label>
+            <input type = "text"
+            class="form-control"
+            id="horaPrechequeo"
+            [(ngModel)] = "boleto.horaPrechequeo"
+            name = "horaPrechequeo">
+        </div>
+        <button class="btn btn-success" [disabled]= "!boletoForm.form.valid">Guardar</button>
+    </form>
+    </div>

@@ -1,0 +1,36 @@
+
+
+<h2>Lista Pasajeros</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Telefono</th>
+            <th>Direccion</th>
+            <th>Genero</th>
+            <th>Nacionalidad</th>               
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pasajero of pasajeros">
+            <td>{{pasajero.id}}</td>
+            <td>{{pasajero.nombrePasajero}}</td>
+            <td>{{pasajero.fecha_NacimientoPas}}</td>
+            <td>{{pasajero.telefonoPasajero}}</td>
+            <td>{{pasajero.direccionPasajero}}</td>
+            <td>{{pasajero.generoPasajero}}</td>
+            <td>{{pasajero.nacionalidadPas}}</td>
+            <td>
+                <button (click)="actualizarPasajeros(pasajero.id)" class="btn btn-info">Editar</button>
+                <button (click)="eliminarPasajero(pasajero.id)" class="btn btn-danger" style="margin-left : 10px">Eliminar</button>
+                <button [routerLink]="'/Sistema/pasajero/ingresar-pasajero/'"
+            class="btn btn-warning" style="margin-left : 5px" >Nuevo</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+

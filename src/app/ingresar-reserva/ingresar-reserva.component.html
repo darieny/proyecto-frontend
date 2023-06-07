@@ -1,0 +1,47 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de Reservas </h3>
+    <form (ngSubmit)="onSubmit()" #reservaForm = "ngForm">
+        <div class="form-group">
+            <label>Id: </label>
+            <input type = "number"
+            class="form-control"
+            id="id"
+            [(ngModel)] = "reserva.id"
+            name = "id">
+        </div>
+        <div class="form-group">
+            <label>Clase Vuelo: </label>
+            <input type = "text"
+            class="form-control"
+            id="claseVuelo"
+            [(ngModel)] = "reserva.claseVuelo"
+            name = "claseVuelo">
+        </div>
+        <div class="form-group">
+            <label>Asiento: </label>
+            <input type = "text"
+            class="form-control"
+            id="asiento"
+            [(ngModel)] = "reserva.asiento"
+            name = "asiento">
+        </div>
+        <!--<div class="form-group">
+            <label>Id Pasajero:</label>
+            <input type="number" 
+            class="form-control" 
+            id="fk_Id_Pasajero" 
+            [(ngModel)]="pasajero.fk_Id_Pasajero" 
+            name="fk_Id_Pasajero">
+        </div>
+        <div class="form-group">
+            <label>Id Vuelo:</label>
+            <input type="number" 
+            class="form-control" 
+            id="fk_Id_Vuelo" 
+            [(ngModel)]="vuelo.fk_Id_Vuelo" 
+            name="fk_Id_Vuelo">
+        </div>-->
+    
+        <button class="btn btn-success" [disabled]= "!reservaForm.form.valid">Guardar</button>
+    </form>
+    </div>

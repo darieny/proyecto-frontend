@@ -1,0 +1,79 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de Vuelos </h3>
+    <form (ngSubmit)="onSubmit()" #vueloForm = "ngForm">
+        <div class="form-group">
+            <label>Id: </label>
+            <input type = "number"
+            class="form-control"
+            id="id"
+            [(ngModel)] = "vuelo.id"
+            name = "id">
+        </div>
+        <div class="form-group">
+            <label>Origen Vuelo: </label>
+            <input type = "text"
+            class="form-control"
+            id="origenVuelo"
+            [(ngModel)] = "vuelo.origenVuelo"
+            name = "origenVuelo">
+        </div>
+        <div class="form-group">
+            <label>Fecha de Salida: </label>
+            <input type = "date"
+            class="form-control"
+            id="fecha_Salida"
+            [(ngModel)] = "vuelo.fecha_Salida"
+            name = "fecha_Salida">
+        </div>
+        <div class="form-group">
+            <label>Hora de Salida: </label>
+            <input type = "texto"
+            class="form-control"
+            id="horaSalida"
+            [(ngModel)] = "vuelo.horaSalida"
+            name = "horaSalida">
+        </div>
+        <div class="form-group">
+            <label>Destino Vuelo: </label>
+            <input type = "text"
+            class="form-control"
+            id="destinoVuelo"
+            [(ngModel)] = "vuelo.destinoVuelo"
+            name = "destinoVuelo">
+        </div>
+        <div class="form-group">
+            <label>Fecha de llegada: </label>
+            <input type = "date"
+            class="form-control"
+            id="fecha_Llegada"
+            [(ngModel)] = "vuelo.fecha_Llegada"
+            name = "fecha_Llegada">
+        </div>
+        <div class="form-group">
+            <label>Hora de Llegada: </label>
+            <input type = "text"
+            class="form-control"
+            id="horaLlegada"
+            [(ngModel)] = "vuelo.horaLlegada"
+            name = "horaLlegada">
+        </div>
+        <div class="form-group">
+            <label>Hora de Revision: </label>
+            <input type = "text"
+            class="form-control"
+            id="horaRevision"
+            [(ngModel)] = "vuelo.horaRevision"
+            name = "horaRevision">
+        </div>
+        <div class="form-group">
+            <label>Numero de Puerta: </label>
+            <input type = "text"
+            class="form-control"
+            id="numero_Puerta"
+            [(ngModel)] = "vuelo.numero_Puerta"
+            name = "numero_Puerta">
+        </div>
+    
+        <button class="btn btn-success" [disabled]= "!vueloForm.form.valid">Guardar</button>
+    </form>
+    </div>
